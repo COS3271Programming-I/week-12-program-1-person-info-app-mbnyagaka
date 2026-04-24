@@ -1,0 +1,61 @@
+import java.util.Scanner;
+
+class Person {
+    String firstName;
+    String lastName;
+    String gender;
+    int age;
+    double weight;
+    double height;
+    String ethnicGroup;
+    String religion;
+
+    void printInfo() {
+        System.out.println("\nPERSON INFORMATION");
+        System.out.println("---------------------------");
+        System.out.println("Name: " + firstName + " " + lastName);
+        System.out.println("Gender: " + gender);
+        System.out.println("Age: " + age);
+        System.out.println("Weight: " + weight + " lbs");
+        System.out.println("Height: " + height + " inches");
+        System.out.println("Ethnic Group: " + ethnicGroup);
+        System.out.println("Religion: " + religion);
+    }
+}
+
+public class PersonInfoapp {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        Person p = new Person();
+
+        System.out.print("Enter first name: ");
+        p.firstName = input.nextLine();
+
+        System.out.print("Enter last name: ");
+        p.lastName = input.nextLine();
+
+        System.out.print("Enter gender: ");
+        p.gender = input.nextLine();
+
+        System.out.print("Enter age: ");
+        p.age = input.nextInt();
+
+        System.out.print("Enter weight (lbs): ");
+        p.weight = input.nextDouble();
+
+        System.out.print("Enter height (inches): ");
+        p.height = input.nextDouble();
+        input.nextLine();
+
+        System.out.print("Enter ethnic group: ");
+        p.ethnicGroup = input.nextLine();
+
+        System.out.print("Enter religion: ");
+        p.religion = input.nextLine();
+
+        p.printInfo();
+
+        input.close();
+    }
+}
